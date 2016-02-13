@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ReplState" timestamp="1455406124487">{:repl-history {:ide [], :local [&quot;(count char \&quot;cc\&quot;)&quot; &quot;(count-char \&quot;cc\&quot;)&quot; &quot;(fib)&quot; &quot;(1 + 2)&quot; &quot;(+ 1 2)&quot; &quot;()&quot; &quot;(foo)&quot;], :remote []}}</component>
+</project>
