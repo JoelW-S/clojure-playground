@@ -59,11 +59,19 @@
      (cons a
            (lazy-seq (fib b sum))))))
 
-(defmacro rev [f & args]
-  (cons f (reverse args)))
-
 (defn palindrome? [x]
   (= (seq (str x)) (reverse (str x))))
 
 (defn count-palindrome []
   (->> (range 10000) (own-filter palindrome?) (count)))
+
+(defmacro id [fun & args]
+  "Macro
+     Returns evaluation of passed function and arguments"
+  `(~fun ~@args))
+
+(def logging-enabled false)
+
+(defmacro log [message]
+  (when logging-enabled
+    (prn message)))
