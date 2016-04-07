@@ -18,10 +18,10 @@
       (cons (first coll) (increment-even (rest coll))))
     coll))
 
-(defn transform-all [predicate coll]
+(defn transform-all [f coll]
   (if (first coll)
-    (cons (predicate (first coll))
-          (transform-all predicate (rest coll)))
+    (cons (f (first coll))
+          (transform-all f (rest coll)))
     coll))
 
 (defn expand [f number count]
